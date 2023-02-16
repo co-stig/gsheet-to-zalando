@@ -1,0 +1,13 @@
+[Unit]
+Description=Zalando Updater
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/zalando-updater
+ExecStart=/usr/bin/python3 /home/ubuntu/zalando-updater/main.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
