@@ -39,9 +39,9 @@ class Zalando:
             data=s
         )
         if res.status_code == 200:
-            print('Update sent successfully')
+            print('Update sent successfully', res)
         else:
-            print('An issue while sending updates to Zalando:', res.json())
+            print('An issue while sending updates to Zalando:', res)
 
 
 class Spreadsheet:
